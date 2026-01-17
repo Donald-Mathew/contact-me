@@ -21,6 +21,7 @@ import email from "./email.png";
 import tiktok from "./tiktok.png";
 import whatsapp from "./whatsapp.png";
 import whatsappbiz from "./whatsappbiz.png";
+import bakery from  "./bakery.svg";
 
 
 
@@ -45,7 +46,8 @@ const assets = {
     email, 
     tiktok, 
     whatsapp, 
-    whatsappbiz
+    whatsappbiz, 
+    bakery
    
 }; 
 export default assets;

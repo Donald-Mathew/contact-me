@@ -2,6 +2,7 @@ import React from 'react'
 import Title from './Title'
 import assets from '../assets/assets';
 import { motion } from "motion/react";
+import { Helmet } from 'react-helmet-async';
 
 const MyWork = () => {
 
@@ -26,6 +27,14 @@ const MyWork = () => {
    ];
 
   return (
+    <>
+    <Helmet>
+      <title>My Work | Donald Mathew Web Development & UI Design</title>
+
+      <meta
+        name="description"
+        content="Explore my portfolio of web development projects, including responsive websites and interactive applications built with modern technologies." />
+    </Helmet>
 
     <motion.div
      initial = "hidden"
@@ -54,7 +63,9 @@ const MyWork = () => {
         </div>
 
     </motion.div>
+    </>
   )
+
 }
 
 export default MyWork

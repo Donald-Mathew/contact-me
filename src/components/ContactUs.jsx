@@ -4,6 +4,7 @@ import { ArrowRight, PersonStandingIcon } from 'lucide-react';
 import assets from '../assets/assets';
 import toast from 'react-hot-toast';
 import { motion } from "motion/react";
+import { Helmet } from 'react-helmet-async';
 
 const ContactUs = ({theme}) => {
 
@@ -34,6 +35,14 @@ const ContactUs = ({theme}) => {
 }
 
   return (
+    <>
+   <Helmet>
+      <title>Contact Us | Donald Mathew Web Development & UI Design</title>
+
+      <meta name="description" content="Get in touch with Donald Mathew for web development and UI design services. Let's create impactful digital experiences together." />
+   </Helmet>
+
+
     <motion.div 
       initial = "hidden"
      whileInView = "visible"
@@ -79,7 +88,9 @@ const ContactUs = ({theme}) => {
      </motion.form>
 
     </motion.div>
+    </>
   )
+
 }
 
 export default ContactUs;

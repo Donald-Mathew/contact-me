@@ -1,13 +1,26 @@
 import React from 'react'
 import assets from '../assets/assets';
 import { motion } from "motion/react";
+import { Helmet } from 'react-helmet-async';
 
-const Hero = ({theme}) => {
+const Hero = ({ theme }) => {
 
 
 
   return (
-    <div id='hero' className='flex flex-col items-center gap-6 py-20 px-4 sm:px-12 lg:px-24 xl:px-40 text-center w-full overflow-hidden text-gray-700 dark:text-white'>
+    <>
+      {/* SEO Metadata */}
+      <Helmet>
+        <title>Home | Donald Mathew Web Development & UI Design</title>
+
+        <meta
+          name="description"
+          content="Turning imagination into interactive digital experiences. Web development, UI/UX design, and creative solutions tailored to your business."
+        />
+
+      </Helmet>
+
+      <div id='hero' className='flex flex-col items-center gap-6 py-20 px-4 sm:px-12 lg:px-24 xl:px-40 text-center w-full overflow-hidden text-gray-700 dark:text-white'>
 
         {/* <motion.div
          initial={{opacity:0, y:20}}
@@ -19,39 +32,40 @@ const Hero = ({theme}) => {
             <p className='text-xs font-medium'>Trusted by 10k people</p>
         </motion.div> */}
 
-      <motion.div
-       initial={{opacity:0, y:20}}
-       whileInView={{opacity:1, y:0}}
-       transition={{duration:0.8, delay:0.8}}
-       viewport={{once:true}}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          viewport={{ once: true }}
 
-      className = {` flex flex-col items-center gap-4 p-8 border-0 bg-linear-to-r from-white via-primary to-white dark:bg-black dark:from-black dark:via-black dark:to-black`}>
-        <motion.h1
-        initial={{opacity:0, y:20}}
-       whileInView={{opacity:1, y:0}}
-       transition={{duration:0.7, delay:0.8}}
-       viewport={{once:true}}
-        className='text-4xl sm:text-5xl md:text-6xl xl:text-[84px] font-medium xl:leading-22.5 max-w-5xl' > Turning Your Imagination Into <span className='bg-linear-to-r from-primary to-[#4d8cea] bg-clip-text text-transparent'>a Solution</span> </motion.h1>
+          className={` flex flex-col items-center gap-4 p-8 border-0 bg-linear-to-r from-white via-primary to-white dark:bg-black dark:from-black dark:via-black dark:to-black`}>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.8 }}
+            viewport={{ once: true }}
+            className='text-4xl sm:text-5xl md:text-6xl xl:text-[84px] font-medium xl:leading-22.5 max-w-5xl' > Turning Your Imagination Into <span className='bg-linear-to-r from-primary to-[#4d8cea] bg-clip-text text-transparent'>a Solution</span> </motion.h1>
 
-        <motion.p
-       initial={{opacity:0, y:20}}
-       whileInView={{opacity:1, y:0}}
-       transition={{duration:0.5, delay:1}}
-       viewport={{once:true}}
-        className='text-sm sm:text-lg font-medium  dark:text-white/75 max-w-4/5 sm:max-w-lg pb-3'>Creating meaningful connections and turning big ideas into interactive digital experiences. </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 1 }}
+            viewport={{ once: true }}
+            className='text-sm sm:text-lg font-medium  dark:text-white/75 max-w-4/5 sm:max-w-lg pb-3'>Creating meaningful connections and turning big ideas into interactive digital experiences. </motion.p>
         </motion.div>
 
 
         <motion.div
-      initial={{opacity:0, scale:0.9}}
-       whileInView={{opacity:1, scale:1}}
-       transition={{duration:0.6, delay:2}}
-       viewport={{once:true}}
-        className='relative -mt-6'>
-            <img src= {assets.pexel2} alt="" className='w-full max-w-6xl rounded-[14px]' />
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 2 }}
+          viewport={{ once: true }}
+          className='relative -mt-6'>
+          <img src={assets.pexel2} alt="" className='w-full max-w-6xl rounded-[14px]' />
         </motion.div>
 
-    </div>
+      </div>
+    </>
   )
 }
 

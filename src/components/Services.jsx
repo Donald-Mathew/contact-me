@@ -3,6 +3,7 @@ import assets from "../assets/assets";
 import Title from './Title';
 import ServiceCard from './ServiceCard';
 import { motion } from "motion/react";
+import { Helmet } from 'react-helmet-async';
 
 const Services = () => {
 
@@ -30,6 +31,14 @@ const Services = () => {
        
     ];
   return (
+    <>
+     <Helmet>
+     <title>Services | Donald Mathew Web Development & UI Design</title>
+      <meta 
+        name="description" 
+        content="Discover my web development, UI/UX design, and full-stack services tailored to grow your business." 
+      />
+     </Helmet>
     <motion.div
     initial = "hidden"
     whileInView= "visible"
@@ -48,6 +57,7 @@ const Services = () => {
        </div>
 
     </motion.div>
+    </>
   )
 }
 
