@@ -6,7 +6,6 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-
 *{
   font-family: "Manrope", sans-serif;
   cursor:none;

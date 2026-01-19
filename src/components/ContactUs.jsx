@@ -51,7 +51,10 @@ const ContactUs = ({theme}) => {
     
     id='contact-us' className='flex flex-col items-center gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 pt-30 text-gray-700 dark:text-white '>
       
-      <Title title ="Reach Out To Me" desc="Turning Your Desired Design And Functionality To Reality" />
+     <div className='md:w-3xl sm:px-12 lg:px-24 xl:px-40  rounded-[14px] lg:w-5xl text-white/90 h-50 py-5 flex flex-col items-center text-center bg-linear-to-r from-white/90 via-[#df8597] to-white/5 dark:bg-black dark:from-black dark:via-black dark:to-black dark:text-white '>
+       <h2 className='text-3xl sm:text-5xl font-medium'>Contact Us</h2>
+       <p className='max-w-2xl mt-11  dark:text-white/75'> <span className='max-sm:text-[#eb7979] max-sm:italic'>From the oven</span> to your table, we craft <span className='bg-linear-to-r from-[#e66881] to-[#DE6980] bg-clip-text text-transparent italic'>fresh breads and confections</span>  made with care and tradition </p>
+     </div>
      
      <motion.form
       initial = {{opacity:0, y:30}}
@@ -81,7 +84,7 @@ const ContactUs = ({theme}) => {
             <textarea name="message" id="" rows={8} placeholder='Enter Your Message' className='w-full p-3 text-sm outline-none rounded-lg border border-gray-300 dark:border-gray-600' required></textarea>
         </div>
 
-        <button type="submit" className='w-max flex  items-center gap-2 bg-primary text-white px-10 py-3 rounded-full cursor-pointer hover:scale-103 transition-all text-xl'>
+        <button type="submit" className='w-max flex  items-center gap-2 bg-[#DE6980] text-white px-10 py-3 rounded-full cursor-pointer hover:scale-103 transition-all text-xl'>
              Submit <ArrowRight className='w-5' />
         </button>
 

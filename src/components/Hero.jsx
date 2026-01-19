@@ -2,10 +2,11 @@ import React from 'react'
 import assets from '../assets/assets';
 import { motion } from "motion/react";
 import { Helmet } from 'react-helmet-async';
+import ThemeToggle from './ThemeToggle';
 
-const Hero = ({ theme }) => {
+const Hero = ({ theme}) => {
 
-
+console.log("Current theme in Hero:", theme); 
 
   return (
     <>
@@ -38,20 +39,20 @@ const Hero = ({ theme }) => {
           transition={{ duration: 0.8, delay: 0.8 }}
           viewport={{ once: true }}
 
-          className={` flex flex-col items-center gap-4 p-8 border-0 bg-linear-to-r from-white via-primary to-white dark:bg-black dark:from-black dark:via-black dark:to-black`}>
+          className={`text-white/65 rounded-[14px] flex flex-col items-center gap-4 p-8 border-0 bg-linear-to-r from-white/10 via-[#df8597] to-white dark:bg-black dark:from-black dark:via-black dark:to-black dark:text-white`}>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.8 }}
             viewport={{ once: true }}
-            className='text-4xl sm:text-5xl md:text-6xl xl:text-[84px] font-medium xl:leading-22.5 max-w-5xl' > Turning Your Imagination Into <span className='bg-linear-to-r from-primary to-[#4d8cea] bg-clip-text text-transparent'>a Solution</span> </motion.h1>
+            className='text-4xl sm:text-5xl md:text-6xl xl:text-[84px] font-medium xl:leading-22.5 max-w-5xl' > Where Simple Ingredients Become  <span className='bg-linear-to-r from-[#e66881] to-[#DE6980] bg-clip-text text-transparent'> Sweet Creations </span> </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 1 }}
             viewport={{ once: true }}
-            className='text-sm sm:text-lg font-medium  dark:text-white/75 max-w-4/5 sm:max-w-lg pb-3'>Creating meaningful connections and turning big ideas into interactive digital experiences. </motion.p>
+            className='text-sm sm:text-lg font-medium  dark:text-white max-w-4/5 sm:max-w-lg pb-3'> Baking fresh breads and confections that turn everyday moments into something special </motion.p>
         </motion.div>
 
 
@@ -61,8 +62,9 @@ const Hero = ({ theme }) => {
           transition={{ duration: 0.6, delay: 2 }}
           viewport={{ once: true }}
           className='relative -mt-6'>
-          <img src={assets.pexel2} alt="" className='w-full max-w-6xl rounded-[14px]' />
+          <img src={theme === "dark" ? assets.cakethree : assets.cakesix} alt="" className={theme === "dark" ? "w-full max-w-6xl rounded-[14px]" :` w-full max-w-6xl rounded-[14px]`} />
         </motion.div>
+
 
       </div>
     </>

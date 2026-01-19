@@ -65,7 +65,7 @@ const ServiceCard = ({ service, index }) => {
     >
       {/* Moving gradient border */}
       <div
-        className="absolute w-[600px] h-[600px] bg-linear-to-r from-blue-500 via-indigo-500 to-purple-500 rounded-full pointer-events-none transition-opacity duration-300"
+        className="absolute w-[600px] h-[600px] bg-linear-to-r from-[#DE6980] via-[#eb2e54] to-[#e9bfc8] rounded-full pointer-events-none transition-opacity duration-300"
         style={{
           top: position.y - 300,
           left: position.x - 300,

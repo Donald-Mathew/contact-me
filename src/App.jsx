@@ -7,6 +7,7 @@ import MyWork from './components/MyWork';
 import ContactUs from './components/ContactUs';
 import {Toaster} from "react-hot-toast";
 import Footer from './components/Footer';
+import Carousel from './components/Carousel';
 
 const App = () => {
     const [theme, setTheme] = useState(localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light');
@@ -48,19 +49,20 @@ const App = () => {
     <div className='dark:bg-black relative'>
       <Toaster />
        <Navbar theme={theme}  setTheme={setTheme} />
-       <Hero />
+       <Hero theme = {theme} setTheme = {setTheme} />
        {/* <TrustedBy /> */}
        <Services />
-       <MyWork />
-       <ContactUs />
+       {/* <MyWork /> */}
+       <Carousel />
+       <ContactUs theme={theme} />
        <Footer theme={theme}  />
     
     {/* Custom Cursor Ring */}
-    <div ref={outlineRef} className='fixed top-0 left-0 h-10 w-10 rounded-full border border-primary pointer-events-none z-9999' 
+    <div ref={outlineRef} className='fixed top-0 left-0 h-10 w-10 rounded-full border border-[#DE6980] pointer-events-none z-9999' 
     style={{transition: 'transform 0.001s ease-out'}}> </div>
 
    {/* Custom Cursor Dot */}
-    <div ref={dotRef} className='fixed top-0 left-0 h-3 w-3 rounded-full bg-primary pointer-events-none z-9999'></div>
+    <div ref={dotRef} className='fixed top-0 left-0 h-3 w-3 rounded-full bg-[#DE6980] pointer-events-none z-9999'></div>
 
     </div>
   );

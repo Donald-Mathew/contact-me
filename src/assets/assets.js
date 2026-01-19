@@ -21,7 +21,31 @@ import email from "./email.png";
 import tiktok from "./tiktok.png";
 import whatsapp from "./whatsapp.png";
 import whatsappbiz from "./whatsappbiz.png";
-import bakery from  "./bakery.svg";
+import bakery2 from  "./bakery2.svg";
+import cake1 from "./cake1.jpg";
+import caketwo from "./caketwo.jpg";
+import cakethree from "./cakethree.jpg";
+import cakefour from "./cakefour.jpg";
+import cakefive from "./cakefive.jpg";
+import cakesix from "./cakesix.jpg";
+import cakeseven from "./cakeseven.jpg"
+import doughknot from "./doughknotkahawa.jpg";
+import bakeicon from "./bakeicon.jpg";
+import bakeicon2 from "./bakeicon2.png"; 
+import bakeicon3 from "./bakeicon3.jpg";
+import bakeicon4 from "./bakeicon4.jpg";
+import bakeicon5 from "./bakeicon5.jpg";
+import bakeicon6 from "./bakeicon6.jpg";
+import bakeicon7 from "./bakeicon7.jpg";
+import cakenine from "./cakenine.jpg";
+import caketen from "./caketen.jpg";
+import cake11 from "./cake11.jpg";
+import cake12 from "./cake12.jpg"; 
+import whatsappone from "./whatsappone.jpg";
+import whatsapptwo from "./whatsapptwo.jpg"
+import instaone from "./instaone.jpg";
+import instatwo from "./instatwo.jpg";
+import call from "./call.png";
 
 
 
@@ -47,7 +71,32 @@ const assets = {
     tiktok, 
     whatsapp, 
     whatsappbiz, 
-    bakery
+    bakery2, 
+    caketwo,
+    cakethree,
+    cakefour, 
+    cakefive,
+    cakesix,
+    cakeseven,
+    doughknot, 
+    bakeicon, 
+    bakeicon2, 
+    bakeicon3, 
+    bakeicon4, 
+    bakeicon5, 
+    bakeicon6, 
+    bakeicon7,
+    cake11,
+    cake12, 
+    cakenine,
+    caketen, 
+    cake1,
+    whatsappone, 
+    whatsapptwo, 
+    instaone, 
+    instatwo, 
+    call
+
    
 }; 
 export default assets;
